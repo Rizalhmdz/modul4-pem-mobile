@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/odd_semester"
+        android:title="@string/odd_semester"/>
+    <item
+        android:id="@+id/even_semester"
+        android:title="@string/even_semester"/>
+    <item
+        android:id="@+id/optional_courses"
+        android:title="@string/optional_courses"/>
+    <item
+        android:id="@+id/setting"
+        android:title="@string/setting"/>
+</menu>

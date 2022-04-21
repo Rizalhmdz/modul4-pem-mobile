@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Modul4</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="odd_semester">Odd Semester</string>
+    <string name="even_semester">Even Semester</string>
+    <string name="optional_courses">Optional Courses</string>
+    <string name="setting">Setting</string>
+
+
+    <string name="subject_s_name">Subject\'s name</string>
+
+    <!--    odd semester-->
+    <string name="programing_concept">Programing Concept</string>
+    <string name="web_programing_concept">Web Programing Concept</string>
+    <string name="algebra">Algebra</string>
+    <string name="calculus">Calculus</string>
+    <string name="pancasila">Pancasila</string>
+
+
+    <!--  even semester  -->
+    <string name="object_oriented_programing">Object Oriented Programing</string>
+    <string name="web_design">Web Design</string>
+    <string name="human_computer_interaction">Human Computer Interaction</string>
+    <string name="query_data_structured">Query Data Structured</string>
+    <string name="artificial_intelligent">Artificial Intelligent</string>
+
+    <!--  optional subject  -->
+    <string name="data_warehouse_data_mining">Data Warehouse and Data Mining</string>
+    <string name="mobile_programing">Mobile Programing</string>
+    <string name="web_application_security">Web Application Security</string>
+    <string name="web_framework">Calculus</string>
+    <string name="audit_it">Audit IT</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>
