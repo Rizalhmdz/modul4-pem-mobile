@@ -1,6 +1,8 @@
 package com.example.modul4.fragment
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -55,7 +57,8 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(action)
             }
             R.id.setting -> {
-
+                val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                startActivity(intent)
             }
         }
         return super.onOptionsItemSelected(item)
