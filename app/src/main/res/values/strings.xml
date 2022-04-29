@@ -75,6 +75,9 @@
     <string name="set_off">Apps Language is English by Default. Switch to change to Bahasa Indonesia</string>
     <string name="set_on">Apps Language is Bahasa Indonesia. Switch to change to English</string>
     <string name="set_title">English</string>
+    <string name="nav_header_desc">By : 1810817210020@mhs.ulm.ac.id</string>
+    <string name="nav_header_title" translatable="false">Muhammad Rizal</string>
+    <string name="home_title">Home</string>
 
 
 </resources>

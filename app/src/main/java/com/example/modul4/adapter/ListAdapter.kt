@@ -1,6 +1,7 @@
 package com.example.modul4.adapter
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.modul4.R
 import com.example.modul4.data.Data
 import com.example.modul4.data.Subject
-import com.example.modul4.fragment.ListFragment
-import com.example.modul4.fragment.ListFragmentDirections
+import com.example.modul4.fragment.EvenFragmentDirections
+import com.example.modul4.fragment.HomeFragment
+import com.example.modul4.fragment.OddFragmentDirections
+import com.example.modul4.fragment.OptionFragmentDirections
 
 class ListAdapter(private val context: Context, private val itemId: String): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -28,13 +31,36 @@ class ListAdapter(private val context: Context, private val itemId: String): Rec
         val dataItem = data[position]
         holder.btn.text = dataItem.name
         holder.btn.setOnClickListener {
-            val bundle = ListFragmentDirections.actionListFragmentToDetailFragment(
-                dataItem.name,
-                dataItem.lecturer,
-                dataItem.credits.toString() + " sks",
-                dataItem.schedule
-            )
-            holder.btn.findNavController().navigate(bundle)
+
+            when(itemId){
+                HomeFragment.ODD -> {
+                    val bundle = OddFragmentDirections.actionNavOddToDetailFragment(
+                        dataItem.name,
+                        dataItem.lecturer,
+                        dataItem.credits.toString() + " sks",
+                        dataItem.schedule
+                    )
+                    holder.btn.findNavController().navigate(bundle)
+                }
+                HomeFragment.EVEN -> {
+                    val bundle = EvenFragmentDirections.actionNavEvenToDetailFragment(
+                        dataItem.name,
+                        dataItem.lecturer,
+                        dataItem.credits.toString() + " sks",
+                        dataItem.schedule
+                    )
+                    holder.btn.findNavController().navigate(bundle)
+                }
+                HomeFragment.OPTIONAL -> {
+                    val bundle = OptionFragmentDirections.actionNavOptionalToDetailFragment(
+                        dataItem.name,
+                        dataItem.lecturer,
+                        dataItem.credits.toString() + " sks",
+                        dataItem.schedule
+                    )
+                    holder.btn.findNavController().navigate(bundle)
+                }
+            }
         }
     }
 
@@ -42,13 +68,13 @@ class ListAdapter(private val context: Context, private val itemId: String): Rec
 
     override fun getItemCount(): Int{
         when(itemId){
-            ListFragment.ODD -> {
+            HomeFragment.ODD -> {
                 data = Data(context).loadOddSemester()
             }
-            ListFragment.EVEN -> {
+            HomeFragment.EVEN -> {
                 data = Data(context).loadEvenSemester()
             }
-            ListFragment.OPTIONAL -> {
+            HomeFragment.OPTIONAL -> {
                 data = Data(context).loadOptionalSubject()
             }
         }

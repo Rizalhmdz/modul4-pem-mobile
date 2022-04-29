@@ -48,4 +48,6 @@
     <string name="set_off">Bahasa Aplikasi adalah Bahasa Inggris Secara Default. Switch untuk mengubah ke Bahasa Indonesia</string>
     <string name="set_on">Bahasa Aplikasi adalah Bahasa Indonesia. Matikan Switch Untuk mengubah ke bahasa Inggris</string>
     <string name="set_title">Bahasa Indonesia</string>
+    <string name="nav_header_desc">Oleh: 1810817210020@mhs.ulm.ac.id</string>
+    <string name="home_title">Beranda</string>
 </resources>

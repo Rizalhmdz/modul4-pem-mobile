@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.modul4.databinding.FragmentDetailBinding
 
+
 class DetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null

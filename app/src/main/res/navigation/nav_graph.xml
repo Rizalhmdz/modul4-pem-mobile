@@ -2,42 +2,51 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/homeFragment">
-
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:name="com.example.modul4.fragment.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="@string/home_title"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_odd"
+        android:name="com.example.modul4.fragment.OddFragment"
+        android:label="@string/odd_semester"
+        tools:layout="@layout/fragment_odd" >
         <action
-            android:id="@+id/action_homeFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_nav_odd_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.modul4.fragment.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        android:id="@+id/nav_even"
+        android:name="com.example.modul4.fragment.EvenFragment"
+        android:label="@string/even_semester"
+        tools:layout="@layout/fragment_even" >
         <action
-            android:id="@+id/action_listFragment_to_detailFragment"
+            android:id="@+id/action_nav_even_to_detailFragment"
             app:destination="@id/detailFragment" />
-        <argument
-            android:name="itemId"
-            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_optional"
+        android:name="com.example.modul4.fragment.OptionFragment"
+        android:label="@string/optional_subject"
+        tools:layout="@layout/fragment_option" >
+        <action
+            android:id="@+id/action_nav_optional_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.modul4.fragment.DetailFragment"
-        android:label="fragment_detail"
+        android:label="Detail"
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="name"
             app:argType="string" />
         <argument android:name="lecturer"
             app:argType="string" />
-        <argument
-            android:name="credits"
+        <argument android:name="credits"
             app:argType="string" />
         <argument
             android:name="schedule"
